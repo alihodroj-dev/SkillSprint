@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct SkillSprintApp: App {
+    
+    init() {
+        // INITIALIZING FIREBASE
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadingView()
         }
     }
 }
