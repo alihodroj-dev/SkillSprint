@@ -41,6 +41,10 @@
 		19A07DD62B7D80E6005E2472 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DD52B7D80E6005E2472 /* LoadingView.swift */; };
 		19A07DD92B81C01E005E2472 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DD82B81C01E005E2472 /* LoginView.swift */; };
 		19A07DDB2B81C5B0005E2472 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DDA2B81C5B0005E2472 /* LoginViewModel.swift */; };
+		19A07DDE2B82F4D2005E2472 /* SignupSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DDD2B82F4D2005E2472 /* SignupSheet.swift */; };
+		19A07DE22B86D5AF005E2472 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DE12B86D5AF005E2472 /* FireBaseManager.swift */; };
+		19A07DE52B86DB64005E2472 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DE42B86DB64005E2472 /* HomeView.swift */; };
+		19A07DE72B86DEDC005E2472 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A07DE62B86DEDC005E2472 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		19A07DD52B7D80E6005E2472 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		19A07DD82B81C01E005E2472 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		19A07DDA2B81C5B0005E2472 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		19A07DDD2B82F4D2005E2472 /* SignupSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSheet.swift; sourceTree = "<group>"; };
+		19A07DE12B86D5AF005E2472 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		19A07DE42B86DB64005E2472 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		19A07DE62B86DEDC005E2472 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +121,9 @@
 			children = (
 				19A07D992B7D7E09005E2472 /* GoogleService-Info.plist */,
 				19A07D8B2B7D7C93005E2472 /* SkillSprintApp.swift */,
+				19A07DE12B86D5AF005E2472 /* FireBaseManager.swift */,
 				19A07DD42B7D8096005E2472 /* Models */,
+				19A07DE82B8B6DCD005E2472 /* Sheets */,
 				19A07DD32B7D807D005E2472 /* Views */,
 				19A07D8F2B7D7CA2005E2472 /* Assets.xcassets */,
 				19A07D912B7D7CA2005E2472 /* Preview Content */,
@@ -140,6 +150,7 @@
 		19A07DD32B7D807D005E2472 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				19A07DE32B86DB58005E2472 /* HomeView */,
 				19A07DD72B81BFFC005E2472 /* AuthView */,
 				19A07DD22B7D8032005E2472 /* LoadingView */,
 			);
@@ -160,6 +171,23 @@
 				19A07DDA2B81C5B0005E2472 /* LoginViewModel.swift */,
 			);
 			path = AuthView;
+			sourceTree = "<group>";
+		};
+		19A07DE32B86DB58005E2472 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				19A07DE42B86DB64005E2472 /* HomeView.swift */,
+				19A07DE62B86DEDC005E2472 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		19A07DE82B8B6DCD005E2472 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				19A07DDD2B82F4D2005E2472 /* SignupSheet.swift */,
+			);
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A07DE22B86D5AF005E2472 /* FireBaseManager.swift in Sources */,
+				19A07DE72B86DEDC005E2472 /* HomeViewModel.swift in Sources */,
 				19A07DDB2B81C5B0005E2472 /* LoginViewModel.swift in Sources */,
+				19A07DDE2B82F4D2005E2472 /* SignupSheet.swift in Sources */,
 				19A07DD92B81C01E005E2472 /* LoginView.swift in Sources */,
 				19A07D8C2B7D7C93005E2472 /* SkillSprintApp.swift in Sources */,
+				19A07DE52B86DB64005E2472 /* HomeView.swift in Sources */,
 				19A07DD62B7D80E6005E2472 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

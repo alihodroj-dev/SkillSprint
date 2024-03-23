@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoadingView: View {
     
@@ -15,9 +16,17 @@ struct LoadingView: View {
     @State private var logoScaleFactor: Double = 1.0
     @State private var logoRotationFactor: Angle = .degrees(0)
     
+    // Navigation
+    @State private var isLoggedIn: Bool = Auth.auth().currentUser != nil
+    
     var body: some View {
+        // MAIN CONTAINER
         ZStack {
-            LoginView()
+            HomeView(isLoggedIn: $isLoggedIn)
+                .opacity(isLoggedIn ? 1 : 0)
+            LoginView(isLoggedIn: $isLoggedIn)
+                .offset(x: isLoggedIn ?  UIScreen.main.bounds.width : 0)
+                .opacity(isLoggedIn ? 0 : 1)
             // BACKGROUND COLOR
             Color.main.ignoresSafeArea()
                 .opacity(self.backgroundColorFadeFactor)
@@ -29,6 +38,7 @@ struct LoadingView: View {
                 .opacity(self.logoFadeFactor)
                 .rotationEffect(self.logoRotationFactor)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
             // SPIN ANIMATION
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
